@@ -1,0 +1,355 @@
+/* Table of Contents
+================================
+- Root CSS Variables
+- HTML
+- Global Helper Classes
+- Responisve Grid
+- Buttons
+- Form
+-
+*/
+
+/* Root CSS Variables
+================================ */
+/* To theme your project, change these vars */
+:root {
+  /* pallete */
+  --primary-color: #455a64;
+  --primary-color-light: #546e7a;
+  --primary-color-dark: #263238;
+  --secondary-color: #4f4564;
+  --secondary-color-light: #687192;
+  --secondary-color-dark: #2c2440;
+
+  /* font color */
+  --font-color-heading: #263238;
+  --font-color-dark: #212121;
+  --font-color-light: #fafafa;
+
+  /* background color */
+  --bg-body-color: #fafafa;
+  --bg-nav-color: var(--primary-color);
+  --outline: #98e2dc;
+
+  --media-query-sm: 600px;
+  --media-query-md: 900px;
+  --media-query-lg: 1024px;
+}
+
+/* HTML
+================================ */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  background-color: var(--bg-body-color);
+  color: var(--font-color-dark);
+}
+a {
+  color: var(--primary-color);
+  font-size: inherit;
+  text-decoration: none;
+  border-bottom: 0.125rem solid transparent;
+}
+a:hover {
+  color: var(--primary-color-light);
+  border-bottom: 0.125rem solid var(--primary-color-light);
+}
+a:focus,
+a:focus-within {
+  outline: 0.25rem solid var(--outline);
+  color: var(--primary-color-light);
+}
+a:active {
+  color: var(--primary-color-dark);
+  border-bottom: 0.125rem solid var(--primary-color-dark);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Helper Classes
+================================ */
+
+/* Typography
+================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--font-color-heading);
+  word-wrap: normal;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.75rem;
+}
+h3 {
+  font-size: 2.125rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 3.75rem;
+  }
+  h3 {
+    font-size: 3.125rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.5625rem;
+}
+
+/* Responsive Grid
+================================ */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+[class^="column"] {
+  flex: 1 0 0%;
+}
+/* MQ Sizes - column: <600, column-md: >600, column-lg: >1024 */
+/* Adjusted width by 1% in each column to have a 2% gap in rows */
+@media (max-width: 600px) {
+  .column-1 {
+    flex: 0 0 auto;
+    width: 15.6666666667%;
+  }
+  .column-2 {
+    flex: 0 0 auto;
+    width: 32.3333333333%;
+  }
+  .column-3 {
+    flex: 0 0 auto;
+    width: 49%;
+  }
+  .column-4 {
+    flex: 0 0 auto;
+    width: 65.6666666667%;
+  }
+  .column-5 {
+    flex: 0 0 auto;
+    width: 82.3333333333%;
+  }
+  .column-6 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .column-md-1 {
+    flex: 0 0 auto;
+    width: 15.6666666667%;
+  }
+  .column-md-2 {
+    flex: 0 0 auto;
+    width: 32.3333333333%;
+  }
+  .column-md-3 {
+    flex: 0 0 auto;
+    width: 49%;
+  }
+  .column-md-4 {
+    flex: 0 0 auto;
+    width: 65.6666666667%;
+  }
+  .column-md-5 {
+    flex: 0 0 auto;
+    width: 82.3333333333%;
+  }
+  .column-md-6 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .column-lg-1 {
+    flex: 0 0 auto;
+    width: 15.6666666667%;
+  }
+  .column-lg-2 {
+    flex: 0 0 auto;
+    width: 32.3333333333%;
+  }
+  .column-lg-3 {
+    flex: 0 0 auto;
+    width: 49%;
+  }
+  .column-lg-4 {
+    flex: 0 0 auto;
+    width: 65.6666666667%;
+  }
+  .column-lg-5 {
+    flex: 0 0 auto;
+    width: 82.3333333333%;
+  }
+  .column-lg-6 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/* Buttons
+================================ */
+/* Base button serves as primary */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  border: 0.125rem solid var(--primary-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.125rem;
+  transition: ease-in-out 200ms;
+}
+
+/* Secondary Button */
+button.secondary,
+input[type="submit"].secondary,
+input[type="reset"].secondary,
+input[type="button"].secondary {
+  background-color: var(--secondary-color);
+  border: 0.125rem solid var(--secondary-color);
+}
+button.secondary:hover,
+input[type="submit"].secondary:hover,
+input[type="reset"].secondary:hover,
+input[type="button"].secondary:hover button.secondary:focus,
+input[type="submit"].secondary:hover,
+input[type="reset"].secondary:hover,
+input[type="button"].secondary:hover {
+  background-color: var(--secondary-color-light);
+}
+button.secondary:active,
+input[type="submit"].secondary:hover,
+input[type="reset"].secondary:hover,
+input[type="button"].secondary:hover {
+  background-color: var(--secondary-color-dark);
+  border: 0.125rem solid var(--secondary-color-dark);
+}
+
+/* Outlined Button */
+button.outlined,
+input[type="submit"].outlined,
+input[type="reset"].outlined,
+input[type="button"].outlined {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 0.125rem solid var(--primary-color);
+}
+button.outlined:hover,
+input[type="submit"].outlined:hover,
+input[type="reset"].outlined:hover,
+input[type="button"].outlined:hover,
+button.outlined:active,
+input[type="submit"].outlined:active,
+input[type="reset"].outlined:active,
+input[type="button"].outlined:active {
+  color: #fff;
+}
+
+/* Hover, Focus, Active */
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  background-color: var(--primary-color-light);
+  border: 0.125rem solid var(--primary-color-light);
+}
+/* add as focus to all inputs */
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus,
+button:focus-within,
+input[type="submit"]:focus-within,
+input[type="reset"]:focus-within,
+input[type="button"]:focus-within {
+  outline: 0.25rem solid var(--outline);
+  background-color: var(--primary-color-light);
+  color: #fff;
+}
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+  background-color: var(--primary-color-dark);
+  border: 0.125rem solid var(--primary-color-dark);
+}
+
+/* Form
+================================ */
+label {
+  display: flex;
+  padding-bottom: 0.25rem;
+  padding-left: 0.125rem;
+}
+input,
+textarea {
+  padding: 0.75rem 0.375rem;
+  font-size: 1.125rem;
+  border-radius: 0.125rem;
+  border: 0.125rem solid var(--primary-color);
+}

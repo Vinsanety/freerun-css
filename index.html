@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Freerun CSS</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="docs/docs.css" />
+    <link rel="stylesheet" href="docs/prism/prism.css" />
+  </head>
+  <body>
+    <header>
+      <div class="docs_nav-container">
+        <a href="#home" tabindex="1" class="nav-logo-home-link">Freerun CSS</a>
+        <nav class="docs_nav">
+          <ul>
+            <li>
+              <a href="#typography" tabindex="1">Typograhy</a>
+            </li>
+            <li>
+              <a href="#responsive-grid" tabindex="1">Grid</a>
+            </li>
+            <li>
+              <a href="#buttons" tabindex="1">Buttons</a>
+            </li>
+            <!-- <li>
+              <a href="#form" tabindex="1">Form</a>
+            </li> -->
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="docs_page-container">
+      <div class="docs_section">
+        <div class="docs_hero-header">
+          <h1>
+            Freerun
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 448 512"
+              class="docs_hero-header_run-icon"
+            >
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H362.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"
+              />
+            </svg>
+          </h1>
+          <h6>A lightweight CSS Library</h6>
+          <p>The building blocks for a design system, UI Framework.</p>
+          <p>
+            All css values are set in <code>rem</code> and are completely
+            customizable to your needs.
+          </p>
+          <p>
+            Freerun includes
+            <a
+              href="https://nicolasgallagher.com/about-normalize-css/"
+              target="_blank"
+              tabindex="-1"
+              >normalize.css</a
+            >
+            and <code>base.css</code>, enabling rapid prototyping for common
+            HTML page layout and elements.
+          </p>
+          <br />
+          <button tabindex="2">Download</button>
+        </div>
+      </div>
+
+      <div class="docs_section" id="typography">
+        <div class="docs_section-header">
+          <h1 class="docs_header">Typography</h1>
+          <div class="docs_section-info">
+            <p>
+              The font-family is set to
+              <code>Helvetica, Arial, sans-serif</code>. The
+              <code>font-size</code> is set to 1.125rem (18px).
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="column-6">
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </div>
+          </div>
+        </div>
+        <!-- Docs Code Block_____________________________________ -->
+        <pre tabindex="-1">
+<code class="language-markup">
+  &lt;!-- HTML Standard Headings -->
+  &lt;h1>Heading&lt;/h1>
+  &lt;h2>Heading&lt;/h2>
+  &lt;h3>Heading&lt;/h3>
+  &lt;h4>Heading&lt;/h4>
+  &lt;h5>Heading&lt;/h5>
+  &lt;h6>Heading&lt;/h6>
+</code>
+</pre>
+        <pre tabindex="-1">
+<code class="language-css">
+  /* Body Font Styles */
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+  }
+</code>
+</pre>
+      </div>
+
+      <div class="docs_section" id="responsive-grid">
+        <div class="docs_section-header">
+          <h1 class="docs_header">Responsive Grid</h1>
+          <div class="docs_section-info">
+            <p>
+              Grid system is 1-6 columns, providing 3 built-in media query
+              classes: <code>column-*</code>, <code>column-md-*</code>, and
+              <code>column-lg-*</code>.
+            </p>
+            <p>
+              All grids must have a <code>.container</code> and
+              <code>.row</code> that wraps the <code>.column-*</code>.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="column-6 column-md-1 docs_grid-column">
+              <p>1</p>
+            </div>
+            <div class="column-6 column-md-5 docs_grid-column">
+              <p>5</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-6 column-md-2 docs_grid-column">
+              <p>2</p>
+            </div>
+            <div class="column-6 column-md-4 docs_grid-column">
+              <p>4</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-6 column-md-3 docs_grid-column">
+              <p>3</p>
+            </div>
+            <div class="column-6 column-md-3 docs_grid-column">
+              <p>3</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-6 column-md-4 docs_grid-column">
+              <p>4</p>
+            </div>
+            <div class="column-6 column-md-2 docs_grid-column">
+              <p>2</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-6 column-md-5 docs_grid-column">
+              <p>5</p>
+            </div>
+            <div class="column-6 column-md-1 docs_grid-column">
+              <p>1</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-6 column-md-6 docs_grid-column">
+              <p>6</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Docs Code Block_____________________________________ -->
+        <pre tabindex="-1">
+<code class="language-markup">
+&lt;!-- Wrap Grid in a .container class -->
+&lt;div class="container">
+
+&lt;!-- .column-* classes should be direct child of a .row -->
+  &lt;div class="row">
+    &lt;div class="column-6 column-md-1 docs_grid-column">&lt;/div>
+    &lt;div class="column-6 column-md-5 docs_grid-column">&lt;/div>
+  &lt;/div>
+  &lt;div class="row">
+    &lt;!-- Adjust the width of your browser to see the column take 2 of 6 in medium (600+) and up, taking all 6 of 6 in mobile (0-599) -->
+    &lt;div class="column-6 column-md-2 docs_grid-column">&lt;/div>
+    &lt;div class="column-6 column-md-4 docs_grid-column">&lt;/div>
+  &lt;/div>
+  &lt;div class="row">
+    &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
+    &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
+  &lt;/div>
+&lt;/div>
+</code>
+</pre>
+      </div>
+
+      <div class="docs_section" id="buttons">
+        <div class="docs_section-header">
+          <h1 class="docs_header">Buttons & Links</h1>
+          <div class="docs_section-info">
+            <p>
+              The button has three variations and one link. The standard button
+              element serves as the primary, the
+              <code>.secondary</code> class and <code>.outlined</code> class are
+              also available.
+            </p>
+            <p>
+              Using an <code>input</code> element with type:
+              <code>"submit"</code>, <code>"reset"</code>, or
+              <code>"button"</code> will also be styled as a button.
+            </p>
+          </div>
+        </div>
+        <div class="docs_section-flex-spacing">
+          <button type="button" name="button">Primary</button>
+          <button type="button" name="button" class="secondary">
+            Secondary
+          </button>
+          <button type="button" class="outlined">Outlined</button>
+          <a href="#">Text Link</a>
+        </div>
+      </div>
+
+      <!-- <div class="docs_section" id="form">
+        <div class="docs_section-header">
+          <h1 class="docs_header">Form</h1>
+          <p class="docs_section-info"></p>
+        </div>
+        <label for="input">Input label</label>
+        <input type="text" name="input" placeholder="Placeholder..." />
+        <label for="textarea">Textarea label</label>
+        <textarea name="textarea" placeholder="Placeholder..."></textarea>
+      </div> -->
+    </div>
+
+    <script src="docs/docs.js"></script>
+    <script src="docs/prism/prism.js"></script>
+  </body>
+</html>
