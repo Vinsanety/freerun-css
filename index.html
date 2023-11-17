@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Freerun CSS</title>
+    <link rel="icon" type="image/x-icon" href="docs/person-running-solid.svg" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="docs/docs.css" />
@@ -24,9 +25,9 @@
             <li>
               <a href="#buttons" tabindex="1">Buttons</a>
             </li>
-            <!-- <li>
+            <li>
               <a href="#form" tabindex="1">Form</a>
-            </li> -->
+            </li>
           </ul>
         </nav>
         <div class="menu-toggle">
@@ -100,7 +101,7 @@
         <!-- Docs Code Block_____________________________________ -->
         <pre tabindex="-1">
 <code class="language-markup">
-  &lt;!-- HTML Standard Headings -->
+  &lt;!-- HTML Headings -->
   &lt;h1>Heading&lt;/h1>
   &lt;h2>Heading&lt;/h2>
   &lt;h3>Heading&lt;/h3>
@@ -225,26 +226,113 @@
             </p>
           </div>
         </div>
-        <div class="docs_section-flex-spacing">
+        <div class="container docs_section-flex-spacing">
           <button type="button" name="button">Primary</button>
           <button type="button" name="button" class="secondary">
             Secondary
           </button>
           <button type="button" class="outlined">Outlined</button>
-          <a href="#">Text Link</a>
+          <a href="#buttons">Text Link</a>
         </div>
+        <!-- Docs Code Block_____________________________________ -->
+        <pre tabindex="-1">
+<code class="language-markup">
+  &lt;button type="button" name="button">Primary&lt;/button>
+  &lt;button type="button" name="button" class="secondary">
+    Secondary
+  &lt;/button>
+  &lt;button type="button" class="outlined">Outlined&lt;/button>
+  &lt;a href="">Text Link&lt;/a>
+</code>
+</pre>
       </div>
 
-      <!-- <div class="docs_section" id="form">
+      <div class="docs_section" id="form">
         <div class="docs_section-header">
-          <h1 class="docs_header">Form</h1>
+          <h1 class="docs_header">Form Elements</h1>
           <p class="docs_section-info"></p>
         </div>
-        <label for="input">Input label</label>
-        <input type="text" name="input" placeholder="Placeholder..." />
-        <label for="textarea">Textarea label</label>
-        <textarea name="textarea" placeholder="Placeholder..."></textarea>
-      </div> -->
+        <form>
+          <div class="container">
+            <div class="row">
+              <div class="column-6 column-md-3">
+                <label for="input-email-address">Email</label>
+                <input
+                  id="input-email-address"
+                  type="email"
+                  name="input"
+                  placeholder="name@mail.com"
+                />
+              </div>
+              <div class="column-6 column-md-3">
+                <label for="select-contact-reason">Contact reason</label>
+                <select id="select-contact-reason" name="select">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div class="column-6 column-md-6">
+                <p>Best time to contact:</p>
+                <label for="morning" class="checkbox-label">
+                  <input
+                    type="radio"
+                    id="morning"
+                    value="morning"
+                    name="radio"
+                  />
+                  Morning
+                </label>
+                <label for="afternoon" class="checkbox-label">
+                  <input
+                    type="radio"
+                    id="afternoon"
+                    value="afternoon"
+                    name="radio"
+                  />
+                  Afternoon
+                </label>
+                <label for="evening" class="checkbox-label">
+                  <input
+                    type="radio"
+                    id="evening"
+                    value="evening"
+                    name="radio"
+                  />
+                  Evening
+                </label>
+              </div>
+              <div class="column-6 column-md-6">
+                <label for="input-address">Address</label>
+                <input
+                  id="input-address"
+                  type="text"
+                  name="address"
+                  placeholder="123 State Street"
+                />
+              </div>
+              <div class="column-6 column-md-6">
+                <label for="textarea-message">Message</label>
+                <textarea
+                  id="textarea-message"
+                  name="textarea"
+                  placeholder="Enter message..."
+                ></textarea>
+              </div>
+              <div class="docs_form-checkbox">
+                <label for="checkbox-copy" class="checkbox-label">
+                  <input id="checkbox-copy" type="checkbox" />
+                  Send myself a copy
+                </label>
+              </div>
+
+              <div class="column-6 column-md-2">
+                <button type="button" name="button">Sendit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="docs/docs.js"></script>
