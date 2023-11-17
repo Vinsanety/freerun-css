@@ -39,7 +39,7 @@
   --media-query-lg: 1024px;
 
   /* Standard Variables */
-  --control-border-radius: 1.5rem;
+  --control-border-radius: 0.5rem;
   --input-border-radius: 0.25rem;
   --box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
     rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;

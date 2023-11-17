@@ -98,7 +98,7 @@
             </div>
           </div>
         </div>
-        <!-- Docs Code Block_____________________________________ -->
+        <!-- Typography Code Block_____________________________________ -->
         <pre tabindex="-1">
 <code class="language-markup">
   &lt;!-- HTML Headings -->
@@ -184,27 +184,27 @@
           </div>
         </div>
 
-        <!-- Docs Code Block_____________________________________ -->
+        <!-- Grid Code Block_____________________________________ -->
         <pre tabindex="-1">
 <code class="language-markup">
-&lt;!-- Wrap Grid in a .container class -->
-&lt;div class="container">
+  &lt;!-- Wrap Grid in a .container class -->
+  &lt;div class="container">
 
-&lt;!-- .column-* classes should be direct child of a .row -->
-  &lt;div class="row">
-    &lt;div class="column-6 column-md-1 docs_grid-column">&lt;/div>
-    &lt;div class="column-6 column-md-5 docs_grid-column">&lt;/div>
+  &lt;!-- .column-* classes should be direct child of a .row -->
+    &lt;div class="row">
+      &lt;div class="column-6 column-md-1 docs_grid-column">&lt;/div>
+      &lt;div class="column-6 column-md-5 docs_grid-column">&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+      &lt;!-- Adjust the width of your browser to see the column take 2 of 6 in medium (600+) and up, taking all 6 of 6 in mobile (0-599) -->
+      &lt;div class="column-6 column-md-2 docs_grid-column">&lt;/div>
+      &lt;div class="column-6 column-md-4 docs_grid-column">&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+      &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
+      &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
+    &lt;/div>
   &lt;/div>
-  &lt;div class="row">
-    &lt;!-- Adjust the width of your browser to see the column take 2 of 6 in medium (600+) and up, taking all 6 of 6 in mobile (0-599) -->
-    &lt;div class="column-6 column-md-2 docs_grid-column">&lt;/div>
-    &lt;div class="column-6 column-md-4 docs_grid-column">&lt;/div>
-  &lt;/div>
-  &lt;div class="row">
-    &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
-    &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
-  &lt;/div>
-&lt;/div>
 </code>
 </pre>
       </div>
@@ -234,7 +234,7 @@
           <button type="button" class="outlined">Outlined</button>
           <a href="#buttons">Text Link</a>
         </div>
-        <!-- Docs Code Block_____________________________________ -->
+        <!-- Buttons Code Block_____________________________________ -->
         <pre tabindex="-1">
 <code class="language-markup">
   &lt;button type="button" name="button">Primary&lt;/button>
@@ -325,13 +325,99 @@
                   Send myself a copy
                 </label>
               </div>
-
               <div class="column-6 column-md-2">
                 <button type="button" name="button">Sendit</button>
               </div>
             </div>
           </div>
         </form>
+
+        <!-- Docs Code Block_____________________________________ -->
+        <pre tabindex="-1">
+<code class="language-markup">
+  &lt;form>
+    &lt;div class="container">
+      &lt;div class="row">
+        &lt;div class="column-6 column-md-3">
+          &lt;label for="input-email-address">Email&lt;/label>
+          &lt;input
+            id="input-email-address"
+            type="email"
+            name="input"
+            placeholder="name@mail.com"
+          />
+        &lt;/div>
+        &lt;div class="column-6 column-md-3">
+          &lt;label for="select-contact-reason">Contact reason&lt;/label>
+          &lt;select id="select-contact-reason" name="select">
+            &lt;option>Option 1&lt;/option>
+            &lt;option>Option 2&lt;/option>
+            &lt;option>Option 3&lt;/option>
+          &lt;/select>
+        &lt;/div>
+        &lt;div class="column-6 column-md-6">
+          &lt;p>Best time to contact:&lt;/p>
+          &lt;!-- Add .radio-label class to label -->
+          &lt;label for="morning" class="radio-label">
+            &lt;input
+              type="radio"
+              id="morning"
+              value="morning"
+              name="radio"
+            />
+            Morning
+          &lt;/label>
+          &lt;label for="afternoon" class="radio-label">
+            &lt;input
+              type="radio"
+              id="afternoon"
+              value="afternoon"
+              name="radio"
+            />
+            Afternoon
+          &lt;/label>
+          &lt;label for="evening" class="radio-label">
+            &lt;input
+              type="radio"
+              id="evening"
+              value="evening"
+              name="radio"
+            />
+            Evening
+          &lt;/label>
+        &lt;/div>
+        &lt;div class="column-6 column-md-6">
+          &lt;label for="input-address">Address&lt;/label>
+          &lt;input
+            id="input-address"
+            type="text"
+            name="address"
+            placeholder="123 State Street"
+          />
+        &lt;/div>
+        &lt;div class="column-6 column-md-6">
+          &lt;label for="textarea-message">Message&lt;/label>
+          &lt;textarea
+            id="textarea-message"
+            name="textarea"
+            placeholder="Enter message..."
+          >&lt;/textarea>
+        &lt;/div>
+        &lt;div class="docs_form-checkbox">
+        &lt;!-- Add .checkbox-label class to label -->
+          &lt;label for="checkbox-copy" class="checkbox-label">
+            &lt;input id="checkbox-copy" type="checkbox" />
+            Send myself a copy
+          &lt;/label>
+        &lt;/div>
+        &lt;div class="column-6 column-md-2">
+          &lt;button type="button" name="button">Sendit&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/form>
+</code>
+</pre>
       </div>
     </div>
 
