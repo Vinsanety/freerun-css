@@ -26,7 +26,6 @@
   --light-font-color: #fff;
   /* Background color */
   --bg-body-color: #fafafa;
-  --bg-nav-color: var(--primary-color);
   --outline-color: #0091ea;
 
   /* Font */
@@ -41,8 +40,9 @@
   /* Standard Variables */
   --control-border-radius: 0.5rem;
   --input-border-radius: 0.25rem;
-  --box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
-    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  --box-shadow: rgba(0, 0, 0, 0.2) 0 0.125rem 0.0625rem -0.0625rem,
+    rgba(0, 0, 0, 0.14) 0 0.0625rem 0.0625rem 0,
+    rgba(0, 0, 0, 0.12) 0 0.0625rem 0.1875rem 0;
 }
 
 /* HTML
@@ -183,31 +183,29 @@ p {
 }
 /* MQ Sizes - column: <600, column-md: >600, column-lg: >1024 */
 /* Adjusted width by 1% in each column to have a 2% gap in rows */
-@media (max-width: 600px) {
-  .column-1 {
-    flex: 0 0 auto;
-    width: 15.6666666667%;
-  }
-  .column-2 {
-    flex: 0 0 auto;
-    width: 32.3333333333%;
-  }
-  .column-3 {
-    flex: 0 0 auto;
-    width: 49%;
-  }
-  .column-4 {
-    flex: 0 0 auto;
-    width: 65.6666666667%;
-  }
-  .column-5 {
-    flex: 0 0 auto;
-    width: 82.3333333333%;
-  }
-  .column-6 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
+.column-1 {
+  flex: 0 0 auto;
+  width: 15.6666666667%;
+}
+.column-2 {
+  flex: 0 0 auto;
+  width: 32.3333333333%;
+}
+.column-3 {
+  flex: 0 0 auto;
+  width: 49%;
+}
+.column-4 {
+  flex: 0 0 auto;
+  width: 65.6666666667%;
+}
+.column-5 {
+  flex: 0 0 auto;
+  width: 82.3333333333%;
+}
+.column-6 {
+  flex: 0 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 600px) {
@@ -397,7 +395,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 2px solid var(--outline-color);
+  border: 0.125rem solid var(--outline-color);
   outline: 0;
 }
 select {
