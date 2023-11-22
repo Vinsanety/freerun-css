@@ -6,7 +6,6 @@
 - Responisve Grid
 - Buttons
 - Form
--
 */
 
 /* Root CSS Variables
@@ -32,10 +31,10 @@
   --font-family: Helvetica, Arial, sans-serif;
   --body-font-size: 1.125rem;
 
-  /* Media Query */
-  --media-query-sm: 600px;
+  /* Media Query - Declared but currently unused*/
+  /* --media-query-sm: 600px;
   --media-query-md: 900px;
-  --media-query-lg: 1024px;
+  --media-query-lg: 1024px; */
 
   /* Standard Variables */
   --control-border-radius: 0.5rem;
@@ -60,7 +59,6 @@ body {
   font-size: var(--body-font-size);
   background-color: var(--bg-body-color);
   color: var(--dark-font-color);
-  /* overflow-wrap: break-word; */
 }
 a {
   color: var(--primary-color);
@@ -93,6 +91,7 @@ ul {
 
 /* Global Helper Classes
 ================================ */
+/* TBD */
 
 /* Typography
 ================================ */
