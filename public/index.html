@@ -131,58 +131,65 @@
             <p>
               Grid system is 1-6 columns, providing 3 built-in media query
               classes: <code>column-*</code>, <code>column-md-*</code>, and
-              <code>column-lg-*</code>.
+              <code>column-lg-*</code>. All grids must have a
+              <code>.container</code> and <code>.row</code> that wraps the
+              <code>.column-*</code>.
             </p>
             <p>
-              All grids must have a <code>.container</code> and
-              <code>.row</code> that wraps the <code>.column-*</code>.
+              Freerun has three media query sizes: mobile, tablet, and desktop.
             </p>
+            <ol>
+              <li>Mobile <code>column-*</code>: 0-599</li>
+              <li>Tablet <code>column-md-*</code>: 600-1023</li>
+              <li>Desktop <code>column-md-*</code>: 1024+</li>
+            </ol>
           </div>
         </div>
         <div class="container">
+          <p>Adjust your browser size to see it in action.</p>
           <div class="row">
-            <div class="column-6 column-md-1 docs_grid-column">
-              <p>1</p>
+            <div class="column-6 column-md-3 column-lg-1 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-1</p>
             </div>
-            <div class="column-6 column-md-5 docs_grid-column">
-              <p>5</p>
+            <div class="column-6 column-md-3 column-lg-5 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-5</p>
             </div>
           </div>
           <div class="row">
-            <div class="column-6 column-md-2 docs_grid-column">
-              <p>2</p>
+            <div class="column-6 column-md-3 column-lg-2 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-2</p>
             </div>
-            <div class="column-6 column-md-4 docs_grid-column">
-              <p>4</p>
+            <div class="column-6 column-md-3 column-lg-4 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-4</p>
             </div>
           </div>
           <div class="row">
             <div class="column-6 column-md-3 docs_grid-column">
-              <p>3</p>
+              <p>column-6<br />column-md-3</p>
             </div>
             <div class="column-6 column-md-3 docs_grid-column">
-              <p>3</p>
+              <p>column-6<br />column-md-3</p>
             </div>
           </div>
           <div class="row">
-            <div class="column-6 column-md-4 docs_grid-column">
-              <p>4</p>
+            <div class="column-6 column-md-3 column-lg-4 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-4</p>
             </div>
-            <div class="column-6 column-md-2 docs_grid-column">
-              <p>2</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="column-6 column-md-5 docs_grid-column">
-              <p>5</p>
-            </div>
-            <div class="column-6 column-md-1 docs_grid-column">
-              <p>1</p>
+            <div class="column-6 column-md-3 column-lg-2 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-2</p>
             </div>
           </div>
           <div class="row">
-            <div class="column-6 column-md-6 docs_grid-column">
-              <p>6</p>
+            <div class="column-6 column-md-3 column-lg-5 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-5</p>
+            </div>
+            <div class="column-6 column-md-3 column-lg-1 docs_grid-column">
+              <p>column-6<br />column-md-3<br />column-lg-1</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column-6 docs_grid-column">
+              <p>column-6</p>
             </div>
           </div>
         </div>
@@ -195,17 +202,18 @@
 
   &lt;!-- .column-* classes should be direct child of a .row -->
     &lt;div class="row">
-      &lt;div class="column-6 column-md-1 docs_grid-column">&lt;/div>
-      &lt;div class="column-6 column-md-5 docs_grid-column">&lt;/div>
+      &lt;div class="column-6 column-md-3 column-lg-1">&lt;/div>
+      &lt;div class="column-6 column-md-3 column-lg-5">&lt;/div>
     &lt;/div>
     &lt;div class="row">
-      &lt;!-- Adjust the width of your browser to see the column take 2 of 6 in medium (600+) and up, taking all 6 of 6 in mobile (0-599) -->
-      &lt;div class="column-6 column-md-2 docs_grid-column">&lt;/div>
-      &lt;div class="column-6 column-md-4 docs_grid-column">&lt;/div>
+    &lt;!-- The first column will be 6/6 in mobile, 3/6 in tablet, and 2/6 in desktop -->
+    &lt;div class="row">
+      &lt;div class="column-6 column-md-3 column-lg-2">&lt;/div>
+      &lt;div class="column-6 column-md-3 column-lg-4">&lt;/div>
     &lt;/div>
     &lt;div class="row">
-      &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
-      &lt;div class="column-6 column-md-3 docs_grid-column">&lt;/div>
+      &lt;div class="column-6 column-md-3">&lt;/div>
+      &lt;div class="column-6 column-md-3">&lt;/div>
     &lt;/div>
   &lt;/div>
 </code>

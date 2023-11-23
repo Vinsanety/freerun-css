@@ -258,15 +258,20 @@ a.docs_footer-link:hover svg {
 
 /* docs grid */
 .docs_grid-column {
+  display: flex;
+  align-items: center;
   min-height: 5rem;
   background-color: #e0e0e0;
 }
 .docs_grid-column p {
   font-family: var(--docs-font-family);
-  line-height: 3rem;
+  line-height: 1.75rem;
+  padding: 1rem 0.25rem;
+  margin: 0;
+  font-size: 0.9375rem;
 }
 
-/* docs grid */
+/* docs form */
 .docs_form-checkbox {
   display: flex;
   justify-content: flex-end;
