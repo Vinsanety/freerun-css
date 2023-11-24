@@ -6,6 +6,7 @@
 - Responisve Grid
 - Buttons
 - Form
+- Lists
 */
 
 /* Root CSS Variables
@@ -414,4 +415,39 @@ input[type="radio"] {
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
   outline-color: var(--outline-color);
+}
+
+/* Lists
+================================ */
+ul {
+  list-style: circle;
+}
+ol {
+  list-style: decimal;
+}
+ol,
+ul {
+  padding-left: 2rem;
+  margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  padding-left: 0;
+  margin: 1.5rem;
+  font-size: 0.9375rem;
+}
+ul ul,
+ol ul {
+  list-style: square;
+}
+ul ol {
+  list-style: decimal;
+}
+ol ol {
+  list-style: lower-alpha;
+}
+li {
+  margin-bottom: 1rem;
 }

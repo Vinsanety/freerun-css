@@ -48,6 +48,11 @@ header::after {
   border-top: 0.0625rem solid transparent;
   border-bottom: 0.0625rem solid transparent;
 }
+@media (min-width: 600px) and (max-width: 767px) {
+  .docs_nav-container .nav-logo-home-link {
+    display: none;
+  }
+}
 .nav-logo-home-link:hover,
 .nav-logo-home-link:focus-visible {
   color: #fff;
@@ -64,10 +69,12 @@ header::after {
 }
 .docs_nav ul {
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 .docs_nav ul li {
   line-height: 3rem;
+  margin: 0;
 }
 .docs_nav ul li:last-child a {
   border-bottom: none;
@@ -165,9 +172,9 @@ button.menu-toggle:focus .hamburger::after {
 footer.docs_footer-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0;
   flex-wrap: wrap;
-  gap: 1rem;
   min-height: 5rem;
   padding: 2rem;
   font-size: 1.125rem;
@@ -175,6 +182,12 @@ footer.docs_footer-container {
   color: var(--font-color-dark);
   background-color: var(--bg-nav-color);
   box-shadow: 0 -0.0625rem 0.3125rem rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 600px) {
+  footer.docs_footer-container {
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 footer.docs_footer-container .docs_footer-copyright,
 .docs_footer-link {
@@ -199,7 +212,7 @@ a.docs_footer-link:hover svg {
 
 /* Docs Classes
 ================================ */
-/* docs page header */
+/* docs page container */
 .docs_page-container {
   max-width: 90rem;
   padding: 4rem 1.5rem 10rem;
