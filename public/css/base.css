@@ -2,11 +2,11 @@
 ================================
 - Root CSS Variables
 - HTML
-- Global Helper Classes
 - Responisve Grid
-- Buttons
+- Button
 - Form
-- Lists
+- List
+- Tokens (coming soon)
 */
 
 /* Root CSS Variables
@@ -33,9 +33,9 @@
   --body-font-size: 1.125rem;
 
   /* Media Query - Declared but currently unused*/
-  /* --media-query-sm: 600px;
+  --media-query-sm: 600px;
   --media-query-md: 900px;
-  --media-query-lg: 1024px; */
+  --media-query-lg: 1024px;
 
   /* Standard Variables */
   --control-border-radius: 0.5rem;
@@ -89,10 +89,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-/* Global Helper Classes
-================================ */
-/* TBD */
 
 /* Typography
 ================================ */
@@ -262,7 +258,7 @@ p {
   }
 }
 
-/* Buttons
+/* Button
 ================================ */
 /* Base button serves as primary */
 button,
@@ -365,6 +361,7 @@ legend {
 }
 label.checkbox-label,
 label.radio-label {
+  margin-top: 0;
   margin-bottom: 1rem;
   font-weight: normal;
 }
@@ -382,6 +379,10 @@ select {
   margin-bottom: 1rem;
   border-radius: var(--input-border-radius);
   border: 0.125rem solid var(--primary-color);
+}
+select {
+  height: 3.0625rem;
+  background: #fff;
 }
 textarea {
   min-height: 5rem;
@@ -417,7 +418,7 @@ input[type="radio"]:focus {
   outline-color: var(--outline-color);
 }
 
-/* Lists
+/* List
 ================================ */
 ul {
   list-style: circle;
@@ -451,3 +452,6 @@ ol ol {
 li {
   margin-bottom: 1rem;
 }
+
+/* Tokens (coming soon)
+================================ */

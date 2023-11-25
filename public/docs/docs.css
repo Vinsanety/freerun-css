@@ -284,12 +284,6 @@ a.docs_footer-link:hover svg {
   font-size: 0.9375rem;
 }
 
-/* docs form */
-.docs_form-checkbox {
-  display: flex;
-  justify-content: flex-end;
-}
-
 pre {
   background-color: #263238 !important;
 }

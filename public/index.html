@@ -26,13 +26,13 @@
               <a href="#responsive-grid" tabindex="1">Grid</a>
             </li>
             <li>
-              <a href="#buttons" tabindex="1">Buttons</a>
+              <a href="#button" tabindex="1">Button</a>
             </li>
             <li>
               <a href="#form" tabindex="1">Form</a>
             </li>
             <li>
-              <a href="#lists" tabindex="1">Lists</a>
+              <a href="#list" tabindex="1">List</a>
             </li>
           </ul>
         </nav>
@@ -69,7 +69,7 @@
               target="_blank"
               tabindex="-1"
               >normalize.css</a
-            >, customizable with <em>only</em> 16 CSS variables.
+            >, customizable with <em>only</em> 19 CSS variables.
           </p>
           <br />
 
@@ -85,10 +85,13 @@
           <h1 class="docs_header">Typography</h1>
           <div class="docs_section-info">
             <p>
-              The font-family is set to
+              The <code>font-family</code> is set to
               <code>Helvetica, Arial, sans-serif</code> and the
-              <code>font-size</code> is set to 1.125rem (18px). They are both
-              overidable css variables in base.css.
+              <code>font-size</code> is set to <code>1.125rem</code> (18px).
+              They are both overidable css variables.
+            </p>
+            <p>
+              The heading sizes are responsive, scaling on smaller viewports.
             </p>
           </div>
         </div>
@@ -223,9 +226,9 @@
 </pre>
       </div>
 
-      <div class="docs_section" id="buttons">
+      <div class="docs_section" id="button">
         <div class="docs_section-header">
-          <h1 class="docs_header">Buttons & Links</h1>
+          <h1 class="docs_header">Button & Link</h1>
           <div class="docs_section-info">
             <p>
               The button has three variations and one link. The standard button
@@ -235,8 +238,8 @@
             </p>
             <p>
               Using an <code>input</code> element with type:
-              <code>"submit"</code>, <code>"reset"</code>, or
-              <code>"button"</code> will also be styled as a button.
+              <code>"submit"</code> or <code>"reset"</code> will also be styled
+              as a button.
             </p>
           </div>
         </div>
@@ -248,9 +251,9 @@
           <button type="button" class="outlined">Outlined</button>
         </div>
         <div class="container">
-          <a href="#buttons">Text Link</a>
+          <a href="#button">Text Link</a>
         </div>
-        <!-- Buttons Code Block_____________________________________ -->
+        <!-- Button Code Block_____________________________________ -->
         <pre tabindex="-1">
 <code class="language-markup">
   &lt;button type="button" name="button">Primary&lt;/button>
@@ -345,7 +348,7 @@
                   placeholder="Enter message..."
                 ></textarea>
               </div>
-              <div class="docs_form-checkbox">
+              <div class="column-6">
                 <label for="checkbox-copy" class="checkbox-label">
                   <input id="checkbox-copy" type="checkbox" />
                   Send myself a copy
@@ -446,9 +449,9 @@
 </pre>
       </div>
 
-      <div class="docs_section" id="lists">
+      <div class="docs_section" id="list">
         <div class="docs_section-header">
-          <h1 class="docs_header">Lists</h1>
+          <h1 class="docs_header">List</h1>
           <p class="docs_section-info">
             Ordered and unordered lists are supported to one nested level. See
             examples below.
@@ -509,7 +512,7 @@
             </ol>
           </div>
         </div>
-        <!-- Lists Code Block_____________________________________ -->
+        <!-- List Code Block_____________________________________ -->
         <pre tabindex="-1">
 <code class="language-markup">
   &lt;ul>
