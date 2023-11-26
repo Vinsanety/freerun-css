@@ -1,0 +1,12 @@
+# Docs
+/docs/icons
+/docs/prism
+
+# Zip
+freerun-css.zip
+
+# Hosting/Prod
+.firebase
+
+#misc
+.DS_Store
